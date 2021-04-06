@@ -11,7 +11,7 @@ if ($('.countdown').length) {
     });
 }
 
-//get url
+//get url by name
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -26,5 +26,15 @@ function getParameterByName(name, url) {
 
     document.getElementById("write").innerHTML = sn;
 
+// Modal
+$('#myModal').modal('show');
+
+// Back to top button
+// $('#modal-open').on('click',function(){
+    
+// });
+$('#modal-open').click(function() {
+    musik.play();
+});
 
 })(jQuery);

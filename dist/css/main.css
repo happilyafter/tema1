@@ -1,21 +1,34 @@
-/* Genereal */
+/* ========== Font ========== */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+:root{
+  --primary-font: 'Oleo Script Swash Caps', cursive;
+
+  --primary-color:#5e4b38;
+}
+
+/* ========== General ========== */
 .title-primary{
     padding-top: 30px;
     text-align: center;
     font-style: italic;
 }
 
-
-.bg-smoke{
-    background-color: whitesmoke;
+.title-primary h4{
+  font-family: var(--primary-font);
 }
 
 #nav-couple, #nav-event, #nav-moment{
-    background:url(/dist/img/bg-theme.pgj);
+    background:url(/dist/img/bg-theme.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-attachment: fixed;
+}
+
+#nav-couple, #nav-event, #nav-moment{
+  color: var(--primary-color);
+  text-shadow: .5px 0px black;
 }
 
 @media (max-width: 576px) {
@@ -23,11 +36,10 @@
         background:url(/dist/img/bg-theme.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: center bottom;
         background-attachment: fixed;
     }
 }
-
 
 
 /* ========== Nav ========== */
@@ -50,7 +62,7 @@
     }
 
 .bg-dark, .btn-dark{
-    background-color: #5e4b38 !important;
+    background-color: var(--primary-color) !important;
 }
 
 .btn-dark{
@@ -61,38 +73,92 @@
 
 /* ========== Section Home ========== */
 #nav-home .jumbotron{
-    background: url(/dist/img/bg-home.jpg);
+    background: url(/dist/img/bg-home.png);
     background-repeat: no-repeat;
     max-width: 100%;
-    height: 95vh;
+    height: 94.5vh;
     background-position:  center;
     background-size: cover;   
 }
 
+#nav-home .jumbotron h1{
+  font-family: var(--primary-font);
+}
 
-/* // Small devices (landscape phones, 576px and up) */
+#nav-home .jumbotron span{
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+#nav-home .jumbotron span::before,#nav-home .jumbotron span::after{
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: white;
+  display: inline-block;
+}
+  #nav-home .jumbotron span::before {
+    margin: 0 15px 5px 0;
+  }
+  #nav-home .jumbotron span::after {
+    margin: 0 0 5px 15px;
+  }
+
+
 #nav-home .jumbotron .container{
     color: #fcf0e3;
     text-shadow: 2px 1px black;
 }
 
+
+/* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
     #nav-home .jumbotron .container{
         position: absolute;
         top: 60%;
         color: #fcf0e3;
         text-shadow: 2px 1px black;
-        background-position:  center bottom;
     }
 }
 
-/* ========== Section Couple ========== */
-#nav-couple .body-couple img{
-    object-fit: cover;
-    height: 10rem;
+@media (min-width: 768px) {
+  #nav-home .jumbotron .container{
+      position: absolute;
+      top: 60%;
+      right:0;
+      left: 0;
+      color: #fcf0e3;
+      text-shadow: 2px 1px black;
+  }
+
+  #nav-home .jumbotron{
+    height: 96vh;
+  }
 }
 
+/* ========== Section Couple ========== */
+.body-couple h3, .body-couple h1{
+  font-family: var(--primary-font);
+  font-size: 38px;
+}
+
+.body-couple img{
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+
+  max-width: 70%;
+
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+
 /* ========== Section Event ========== */
+.card{
+  border-radius: 15px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+
+  border-bottom: 5px solid black;
+}
 /* Countdown */
 #nav-event .countdown div {
     text-align: center;
@@ -114,8 +180,9 @@
 
 /* ========== Section Moment ========== */
 #nav-moment .ls{
-    border-right : 1px solid black ;
+    border-right : 1px solid var(--primary-color) ;
 }
+
 #nav-moment .ls-img img{
     max-width: 50%;
     object-fit: cover;
@@ -216,6 +283,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
+}
+
+
+/* Modal */
+#myModal .modal-content{
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  color: white;
+  height: 80vh !important;
+  
+  opacity: 80%;
 }
 
 
