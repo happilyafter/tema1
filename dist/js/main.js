@@ -29,10 +29,7 @@ function getParameterByName(name, url) {
 // Modal
 $('#myModal').modal('show');
 
-// Back to top button
-// $('#modal-open').on('click',function(){
-    
-// });
+
 $('#modal-open').click(function() {
     musik.play();
 });
