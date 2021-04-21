@@ -34,4 +34,8 @@ $('#modal-open').click(function() {
     musik.play();
 });
 
+//AOS Initialization
+AOS.init();
+
+
 })(jQuery);

@@ -1,6 +1,7 @@
 /* ========== Font ========== */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
 
+
 :root{
   --primary-font: 'Oleo Script Swash Caps', cursive;
 
@@ -83,6 +84,7 @@
 
 #nav-home .jumbotron h1{
   font-family: var(--primary-font);
+
 }
 
 #nav-home .jumbotron span{
@@ -147,6 +149,10 @@
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
+.body-couple h1{
+  font-size: 2.5rem;
+}
+
 
 /* ========== Section Event ========== */
 #nav-event .card{
@@ -161,7 +167,7 @@
     margin: 5px;
     max-width: 100px;
     padding: 15px 0;
-    background: rgba(153, 153, 153, 0.068);
+    background: rgba(0, 0, 0, 0.068);
     border-top: 5px solid #BC9C7B;
   }
   
@@ -180,8 +186,11 @@
   border-radius: 20px !important;
   
 }
+.body-moment h2{
+  color: var(--primary-color);
+}
 
-.body-moment p, .body-moment h2, .body-moment span{
+.body-moment p, .body-moment span{
   color: black;
 }
 
